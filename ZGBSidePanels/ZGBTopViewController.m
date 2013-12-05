@@ -7,21 +7,9 @@
 //
 
 #import "ZGBTopViewController.h"
-
-@interface ZGBTopViewController ()
-
-@end
+#import "ZGBSidePanelsController.h"
 
 @implementation ZGBTopViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -33,6 +21,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)bounceButtonPressed:(id)sender
+{
+    [self.panelsController bounceBackWithDirection:ZGBPanelBounceDirectionUp
+                                          duration:0.25f
+                                            offset:0.25f
+                                           bounces:6];
 }
 
 @end

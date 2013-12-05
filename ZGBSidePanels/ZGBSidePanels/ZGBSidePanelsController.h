@@ -124,7 +124,7 @@ typedef NS_ENUM(NSUInteger, ZGBRecognizedPanelSwipeDirection) {
  *
  *  @param      direction       The bouncing direction.
  *  @param      duration        The animation duration.
- *  @param      offset          The bouncing offset.
+ *  @param      offset          The bouncing offset. [0.0, 1.0]
  *  @param      bounces         The number of bounces the animation sequence should play.
  *
  */

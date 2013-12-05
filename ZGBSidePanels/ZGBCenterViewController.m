@@ -9,20 +9,14 @@
 #import "ZGBCenterViewController.h"
 #import "ZGBSidePanelsController.h"
 
-@interface ZGBCenterViewController ()
-{
-    
-}
-
-@end
-
 @implementation ZGBCenterViewController
+{
+    __weak IBOutlet UITableView *_tableView;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -117,7 +111,7 @@
 
 - (IBAction)sliderValueChanged:(UISlider *)sender
 {
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:sender.tag inSection:0]];
+    UITableViewCell *cell = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:sender.tag inSection:0]];
     UILabel *label = (UILabel *)[cell viewWithTag:1];
     
     switch (sender.tag) {

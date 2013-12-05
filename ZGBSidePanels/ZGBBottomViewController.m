@@ -7,21 +7,9 @@
 //
 
 #import "ZGBBottomViewController.h"
-
-@interface ZGBBottomViewController ()
-
-@end
+#import "ZGBSidePanelsController.h"
 
 @implementation ZGBBottomViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -33,6 +21,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)moveButtonPressed:(id)sender
+{
+    [self.panelsController moveWithDirection:ZGBRecognizedPanelSwipeDirectionDown
+                                    duration:1.5f];
 }
 
 @end

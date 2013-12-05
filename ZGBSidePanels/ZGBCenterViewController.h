@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ZGBSidePanelsController.h"
 
-@interface ZGBCenterViewController : UITableViewController <ZGBSidePanelsDelegate>
+@interface ZGBCenterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ZGBSidePanelsDelegate>
 
 @end

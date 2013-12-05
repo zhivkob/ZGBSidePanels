@@ -8,10 +8,6 @@
 
 #import "ZGBLeftRightViewController.h"
 
-@interface ZGBLeftRightViewController ()
-
-@end
-
 @implementation ZGBLeftRightViewController
 
 - (void)viewDidLoad
